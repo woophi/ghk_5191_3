@@ -40,9 +40,11 @@ const faqs = [
   },
 ];
 
-// if (LS.getItem(LSKeys.ShowThx, false)) {
-//    window.location.replace('');
-// }
+const LINK = 'alfabank://longread?endpoint=v1/adviser/longreads/60715';
+
+if (LS.getItem(LSKeys.ShowThx, false)) {
+  window.location.replace(LINK);
+}
 
 export const App = () => {
   const [loading, setLoading] = useState(false);
@@ -60,7 +62,7 @@ export const App = () => {
 
     LS.setItem(LSKeys.ShowThx, true);
     setLoading(false);
-    // window.location.replace('')
+    window.location.replace(LINK);
   };
 
   return (
@@ -94,11 +96,11 @@ export const App = () => {
           <PureCell.Content>
             <PureCell.Main>
               <Typography.TitleResponsive color="primary-inverted" tag="h3" view="xsmall" font="system" weight="semibold">
-                Торговля без комиссии
+                Покупка акций и облигаций без комиссии
               </Typography.TitleResponsive>
 
               <Typography.Text view="primary-small" color="secondary-inverted">
-                Все паи биржевых фондов Альфа-Капитал
+                При обороте от 200 000 ₽
               </Typography.Text>
             </PureCell.Main>
           </PureCell.Content>
